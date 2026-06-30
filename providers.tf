@@ -6,21 +6,21 @@
 ################################################################################
 
 terraform {
-  # Require Terraform 1.0 or higher for stability
-  required_version = ">= 1.0"
+  # Require Terraform 1.5 or higher for stability
+  required_version = ">= 1.5"
 
   required_providers {
     kubernetes = {
       source  = "hashicorp/kubernetes"
-      version = "~> 2.0"
+      version = "= 3.2.0"
     }
     kubectl = {
       source  = "gavinbunney/kubectl"
-      version = ">= 1.7.0"
+      version = "= 1.19.0"
     }
     helm = {
       source  = "hashicorp/helm"
-      version = "~> 2.0"
+      version = "= 3.2.0"
     }
   }
 
@@ -30,6 +30,7 @@ terraform {
     region = "us-east-1" # Local Nutanix Object Storage region
     endpoints = { s3 = "http://obj02.somecompany.com" }
     bucket = "tf-nkp-dc1-cl01"
+    encrypt = true
 
     # Nutanix Object Storage compatibility settings
     skip_requesting_account_id  = true
