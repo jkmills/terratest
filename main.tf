@@ -47,15 +47,3 @@ module "kubernetes-dashboard" {
   kubeconfig_path = var.kubeconfig_path
 }
 
-
-# -----------------------------------------------------------------------------
-# Outputs
-# -----------------------------------------------------------------------------
-
-output "deployed_modules" {
-  description = "List of successfully deployed modules"
-  value = [
-    "ghrunners",
-    "kubernetes-dashboard"
-  ]
-}
