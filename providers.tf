@@ -12,15 +12,15 @@ terraform {
   required_providers {
     kubernetes = {
       source  = "hashicorp/kubernetes"
-      version = "= 3.2.0"
+      version = "~> 3.2"
     }
     kubectl = {
       source  = "gavinbunney/kubectl"
-      version = "= 1.19.0"
+      version = "~> 1.19"
     }
     helm = {
       source  = "hashicorp/helm"
-      version = "= 3.2.0"
+      version = "~> 3.2"
     }
   }
 
@@ -31,6 +31,7 @@ terraform {
     endpoints = { s3 = "http://obj02.somecompany.com" }
     bucket = "tf-nkp-dc1-cl01"
     encrypt = true
+    # DynamoDB is not available on this platform
 
     # Nutanix Object Storage compatibility settings
     skip_requesting_account_id  = true
