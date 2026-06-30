@@ -31,7 +31,7 @@ terraform {
     endpoints = { s3 = "http://obj02.somecompany.com" }
     bucket = "tf-nkp-dc1-cl01"
     encrypt = true
-    # DynamoDB is not available on this platform
+    # code-review:ignore BP-022 -- Nutanix Object Storage has no DynamoDB feature
 
     # Nutanix Object Storage compatibility settings
     skip_requesting_account_id  = true
