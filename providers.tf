@@ -50,7 +50,7 @@ terraform {
 
 provider "kubernetes" {
   config_path    = "~/.kube/config"
-  config_context = "jkmills-nkp-dc1-cl01.somecompnay.com"
+  config_context = "jkmills-nkp-dc1-cl01.somecompany.com"
 }
 
 provider "helm" {
